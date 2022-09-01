@@ -1,5 +1,5 @@
-import {tickerChange as getTickerInfo, tickers, searchCache} from "./getTicker.js"
-import express from 'express'
+import {tickerChange as getTickerInfo, tickers, searchCache} from "./getTicker.js";
+import express from 'express';
 
 const app = express();
 

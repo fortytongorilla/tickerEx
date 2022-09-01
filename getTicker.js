@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import fetch from 'node-fetch';
 import cheerio  from 'cheerio';
 
 const url = 'https://money.cnn.com/quote/quote.html?symb=';
