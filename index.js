@@ -1,5 +1,6 @@
 import express from 'express';
-const product = require("./api/product")
+const product = require("./api/product");
+import {tickerChange as getTickerInfo, tickers, searchCache} from "./getTicker.js"
 
 const app = express();
 const PORT = process.env.PORT || 5050;

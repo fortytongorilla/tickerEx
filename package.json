@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/fortytongorilla/tickerEx#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.1",
+    "fetch": "^1.1.0"
   }
 }
