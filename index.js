@@ -1,13 +1,24 @@
-import express from 'express';
-const product = require("./api/product");
 import {tickerChange as getTickerInfo, tickers, searchCache} from "./getTicker.js"
+import express from 'express'
 
 const app = express();
-const PORT = process.env.PORT || 5050;
 
-app.use("/api/product", product); 
+const port = process.env.PORT ||3000;  
 
-app.listen(PORT, () => console.log(`Server runiing on port ${PORT}`));
+app.get('/', (req, res) => {
+    res.json({
+        message: 'Scrapping is fun!'
+    })
+})
+
+app.get('/ticker/:ticker', (req, res) => {
+    getTickerInfo(req.params.ticker)
+        .then((tic) => res.json(tic))
+})
 
 
+
+app.listen(port, () => {
+    console.log(`Listening on ${port}`);
+})
 
