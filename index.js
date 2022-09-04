@@ -15,10 +15,7 @@ app.get('/', (req, res) => {
 
 app.get('/ticker/:ticker', (req, res) => {
     getTickerInfo(req.params.ticker)
-        .then((tic) => {
-            console.log(res);
-            return res.json(tic)
-        })
+        .then((tic) => res.json(tic))
 })
 
 
